@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AP Biology Study Guides — Unit 3 & Unit 4 | Jerry Labs</title>
-  <meta name="description" content="Original, fact-checked AP Biology study guides for Unit 3 (Cellular Energetics) and Unit 4 (Cell Communication & Cell Cycle). Includes comparison tables, practice MCQs, scored FRQs, and 1-page cram sheets.">
-  <meta property="og:title" content="AP Biology Study Guides — Unit 3 & Unit 4">
-  <meta property="og:description" content="Download the Free 1-Page Enzyme Inhibition Cheat Sheet + full Unit 3 & Unit 4 PDF study guides with practice FRQs and cram sheets.">
-  <meta property="og:image" content="https://jerryhsieh991-lang.github.io/ap-bio-study-guides/unit-3-social.png">
+  <title>StudyLab Hub — AP & College Study Guides (Biology · Chemistry · Calculus)</title>
+  <meta name="description" content="Multi-subject AP & College study guides starting from Unit 1 / Chapter 1 across Biology, General Chemistry, and College Calculus. Includes worked exam problems, tables, and cram sheets.">
+  <meta property="og:title" content="StudyLab Hub — AP & College Study Guides (Starting from Unit 1 · Chapter 1)">
+  <meta property="og:description" content="Download Unit 1 / Chapter 1 PDF study guides for AP & College Biology, General Chemistry, and Calculus I + watch full NotebookLM Explainer videos.">
+  <meta property="og:image" content="https://jerryhsieh991-lang.github.io/ap-bio-study-guides/bio-unit-1-cover.png">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   <style>
     :root {
       --bg: #0b1120;
@@ -18,9 +17,9 @@
       --text: #f8fafc;
       --muted: #94a3b8;
       --emerald: #10b981;
-      --emerald-dark: #059669;
-      --cyan: #0ea5e9;
+      --purple: #a78bfa;
       --amber: #f59e0b;
+      --cyan: #38bdf8;
     }
     * { box-sizing: border-box; }
     body {
@@ -30,274 +29,178 @@
       color: var(--text);
       line-height: 1.6;
     }
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    header {
-      padding: 48px 0 32px;
-      text-align: center;
-      border-bottom: 1px solid var(--card-border);
-    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 48px 0 32px; text-align: center; border-bottom: 1px solid var(--card-border); }
     .badge {
       display: inline-block;
       background: rgba(16, 185, 129, 0.14);
       color: #34d399;
       border: 1px solid rgba(16, 185, 129, 0.35);
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 999px;
       font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: clamp(2rem, 4.5vw, 3.1rem);
-      line-height: 1.15;
-      margin: 0 0 14px;
-      letter-spacing: -0.02em;
-    }
-    .subtitle {
-      max-width: 680px;
-      margin: 0 auto 26px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 22px;
-      border-radius: 10px;
       font-weight: 700;
-      font-size: 0.98rem;
-      text-decoration: none;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-      cursor: pointer;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+    .subtitle { max-width: 720px; margin: 0 auto 24px; color: var(--muted); font-size: 1.06rem; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 20px; border-radius: 10px; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; transition: transform 0.15s ease, opacity 0.15s ease;
     }
     .btn:hover { transform: translateY(-2px); opacity: 0.95; }
-    .btn-primary {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      color: #042f2e;
+    .btn-primary { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #042f2e; }
+    .btn-purple { background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%); color: #fff; }
+    .btn-amber { background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%); color: #1c1917; }
+    .btn-blue { background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); color: #082f49; }
+    .btn-outline { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid #334155; }
+    .section-header {
+      margin: 44px 0 18px;
+      display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      border-bottom: 1px solid var(--card-border); padding-bottom: 10px;
     }
-    .btn-blue {
-      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-      color: #082f49;
-    }
-    .btn-outline {
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      border: 1px solid #334155;
-    }
-    .sample-box {
-      margin: 36px 0;
-      background: linear-gradient(145deg, rgba(6, 78, 59, 0.35), rgba(15, 23, 42, 0.9));
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      border-radius: 16px;
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 24px;
-      align-items: center;
-    }
-    @media (max-width: 760px) {
-      .sample-box, .products-grid { grid-template-columns: 1fr !important; }
-    }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-      margin: 36px 0;
+    .section-header h2 { margin: 0; font-size: 1.55rem; }
+    .section-header span { color: var(--muted); font-size: 0.92rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    @media (max-width: 900px) {
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
     }
     .card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+      overflow: hidden; display: flex; flex-direction: column;
     }
-    .card-cover {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-bottom: 1px solid var(--card-border);
-    }
-    .card-body {
-      padding: 24px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .price-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .unit-tag {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #34d399;
-    }
-    .unit-tag.u4 { color: #38bdf8; }
-    .price-pill {
-      background: rgba(255,255,255,0.08);
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #f8fafc;
-    }
-    .card h2 {
-      font-size: 1.38rem;
-      margin: 0 0 10px;
-      line-height: 1.3;
-    }
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0 0 16px;
-    }
-    .feature-list {
-      margin: 0 0 22px;
-      padding-left: 18px;
-      color: #cbd5e1;
-      font-size: 0.92rem;
-      flex: 1;
-    }
-    .feature-list li { margin-bottom: 6px; }
-    .quiz-card {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 14px;
-      padding: 22px;
-    }
-    details {
-      margin-top: 12px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-size: 0.9rem;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      color: #34d399;
-    }
+    .card-cover { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-bottom: 1px solid var(--card-border); }
+    .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .tag { font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .tag.bio { color: #34d399; }
+    .tag.chem { color: #a78bfa; }
+    .tag.calc { color: #fbbf24; }
+    .tag.u4 { color: #38bdf8; }
+    .card h3 { font-size: 1.25rem; margin: 0 0 8px; line-height: 1.3; }
+    .card p { color: var(--muted); font-size: 0.92rem; margin: 0 0 14px; }
+    .feature-list { margin: 0 0 18px; padding-left: 18px; color: #cbd5e1; font-size: 0.88rem; flex: 1; }
+    .feature-list li { margin-bottom: 5px; }
     footer {
-      margin-top: 56px;
-      padding: 32px 0;
-      border-top: 1px solid var(--card-border);
-      color: #64748b;
-      font-size: 0.84rem;
-      text-align: center;
+      margin-top: 56px; padding: 32px 0; border-top: 1px solid var(--card-border);
+      color: #64748b; font-size: 0.84rem; text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="badge">Lens Fact-Checked · Original AP Biology Guides</div>
-      <h1>AP Biology Study Guides Built Around How FRQs Actually Test You</h1>
+      <div class="badge">StudyLab Hub · Multi-Subject College &amp; AP Curriculum</div>
+      <h1>Start at Unit 1 · Chapter 1 Across Biology, Chemistry &amp; College Calculus</h1>
       <p class="subtitle">
-        Skip the 50-page textbook chapters. Plain-language pathways, side-by-side comparison tables, common AP exam traps, scored practice FRQs, and 1-page night-before cram sheets.
+        Original, step-by-step study guides and NotebookLM video lectures built around how college midterms and AP free-response questions actually test you.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="AP-Bio-Unit-3-Free-1Page-Sample.pdf" download>
-          ⬇ Download Free 1-Page Sample (PDF)
+        <a class="btn btn-primary" href="#unit1">Explore Unit 1 · Chapter 1 Foundations ↓</a>
+        <a class="btn btn-outline" href="https://www.youtube.com/channel/UC6Dak8vJ8jOWiU8GSinkjyg" target="_blank" rel="noopener">
+          📺 Watch on StudyLab Hub YouTube
         </a>
-        <a class="btn btn-outline" href="#guides">
-          Browse Unit 3 &amp; Unit 4 Guides ↓
+        <a class="btn btn-outline" href="AP-Bio-Unit-3-Free-1Page-Sample.pdf" download>
+          ⬇ Free 1-Page Enzyme Cheat Sheet
         </a>
       </div>
     </header>
 
-    <section class="sample-box">
-      <div>
-        <div class="unit-tag">Free Instant Download · Lead Magnet</div>
-        <h2 style="margin: 6px 0 10px; font-size: 1.5rem;">Enzyme Inhibition Rapid-Comparison Sheet (Unit 3 Sample)</h2>
-        <p style="color: #cbd5e1; margin: 0 0 16px;">
-          Struggling to tell <strong>competitive vs. allosteric (noncompetitive) inhibition</strong> apart on substrate-rate graphs? Grab the free 1-page PDF sheet with the side-by-side graph table, feedback inhibition breakdown, and quick AP check.
-        </p>
-        <a class="btn btn-primary" href="AP-Bio-Unit-3-Free-1Page-Sample.pdf" download>
-          ⬇ Get the 1-Page Sample PDF (Free)
-        </a>
-      </div>
-      <div class="quiz-card">
-        <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #f59e0b; font-weight: 700;">
-          Interactive Quick Check
+    <div id="unit1" class="section-header">
+      <h2>🚀 Unit 1 · Chapter 1 Foundations (Biology · Chemistry · College Calculus)</h2>
+      <span>Start every course from Chapter 1 with complete equations, tables &amp; worked problems</span>
+    </div>
+
+    <section class="grid-3">
+      <!-- Biology Unit 1 -->
+      <article class="card">
+        <img class="card-cover" src="bio-unit-1-cover.png" alt="Biology Unit 1 Chemistry of Life Cover">
+        <div class="card-body">
+          <div class="tag bio">AP &amp; College Biology · Unit 1 (Ch. 1–5)</div>
+          <h3>Unit 1: Chemistry of Life (Water, Carbon &amp; Macromolecules)</h3>
+          <p>Experimental design, polarity &amp; H-bonding, functional groups, and all 4 macromolecule classes.</p>
+          <ul class="feature-list">
+            <li><strong>Ch. 1 Experimental Design:</strong> Null ($H_0$) vs. alternative hypotheses, controls &amp; $\pm 2\text{ SE}_{\bar{x}}$ error bars</li>
+            <li><strong>Ch. 2 Water &amp; H-Bonding:</strong> Cohesion, adhesion, specific heat &amp; evaporative cooling</li>
+            <li><strong>Ch. 3–5 Macromolecules:</strong> Carbs, lipids, proteins ($1^\circ$–$4^\circ$ folding) &amp; DNA/RNA directionality</li>
+          </ul>
+          <a class="btn btn-primary" href="Biology-Unit-1-Ch1-5-Chemistry-of-Life-Study-Guide.pdf" download>
+            ⬇ Download Bio Unit 1 PDF
+          </a>
         </div>
-        <p style="font-size: 0.95rem; margin: 8px 0 12px;">
-          <strong>Q:</strong> An enzyme's maximum rate drops by 45% when an inhibitor is added. Adding 10× more substrate does <em>not</em> restore the maximum rate. Which inhibitor type is this?
-        </p>
-        <details>
-          <summary>Reveal Answer &amp; AP Scoring Explanation</summary>
-          <p style="margin: 8px 0 0; color: #e2e8f0;">
-            <strong>Allosteric (noncompetitive) inhibition.</strong> The inhibitor binds outside the active site and alters the enzyme's 3D conformation, distorting the active site geometry so extra substrate cannot rescue V<sub>max</sub>.
-          </p>
-        </details>
-      </div>
+      </article>
+
+      <!-- Chemistry Unit 1 -->
+      <article class="card">
+        <img class="card-cover" src="chem-unit-1-cover.png" alt="Chemistry Unit 1 Atomic Structure Cover">
+        <div class="card-body">
+          <div class="tag chem">AP &amp; General Chemistry · Unit 1 (Ch. 1–2)</div>
+          <h3>Unit 1: Atomic Structure, PES &amp; Periodic Trends</h3>
+          <p>Moles, mass spectroscopy, empirical formulas, electron configurations, PES spectra, and Coulomb's Law.</p>
+          <ul class="feature-list">
+            <li><strong>Ch. 1 Stoichiometry Foundations:</strong> Moles, molar mass, mass spec &amp; hydrate lab error analysis</li>
+            <li><strong>Ch. 2 Electronic Structure:</strong> Aufbau, transition metal cations &amp; PES binding energy spectra</li>
+            <li><strong>Periodic Trends &amp; Exceptions:</strong> Coulomb's Law ($Z_{\text{eff}}$ vs. shell $n$), Be/B &amp; N/O $IE_1$ anomalies</li>
+          </ul>
+          <a class="btn btn-purple" href="Chemistry-Unit-1-Ch1-2-Atomic-Structure-Study-Guide.pdf" download>
+            ⬇ Download Chem Unit 1 PDF
+          </a>
+        </div>
+      </article>
+
+      <!-- Calculus Unit 1 -->
+      <article class="card">
+        <img class="card-cover" src="calc-unit-1-cover.png" alt="College Calculus I Unit 1 Limits Cover">
+        <div class="card-body">
+          <div class="tag calc">College Calculus I &amp; AP Calc · Unit 1 (Ch. 1)</div>
+          <h3>Unit 1: Limits, Continuity &amp; The Derivative</h3>
+          <p>One-sided limits, $0/0$ algebraic techniques, trig limits, Squeeze Theorem, IVT, and limit derivatives.</p>
+          <ul class="feature-list">
+            <li><strong>Algebraic $0/0$ Moves:</strong> Factoring, conjugate rationalization &amp; complex fractions</li>
+            <li><strong>Trig Limits &amp; Asymptotes:</strong> $\lim_{x\to 0}\frac{\sin(kx)}{kx}=1$ &amp; radical limits as $x\to -\infty$</li>
+            <li><strong>Continuity &amp; IVT:</strong> 3-part continuity test, piecewise parameter solves &amp; disguised derivatives</li>
+          </ul>
+          <a class="btn btn-amber" href="College-Calculus-Unit-1-Ch1-Limits-and-Derivatives-Study-Guide.pdf" download>
+            ⬇ Download Calc Unit 1 PDF
+          </a>
+        </div>
+      </article>
     </section>
 
-    <section id="guides" class="products-grid">
-      <!-- Unit 3 Card -->
+    <div class="section-header">
+      <h2>🧬 Biology Series Continuation — Unit 3 &amp; Unit 4 Deep-Dive Guides</h2>
+      <span>Paired with full 1080p NotebookLM Whiteboard Explainer Lectures on StudyLab Hub</span>
+    </div>
+
+    <section class="grid-2">
+      <!-- Unit 3 -->
       <article class="card">
-        <img class="card-cover" src="unit-3-cover.png" alt="AP Biology Unit 3 Cellular Energetics Study Guide Cover">
+        <img class="card-cover" src="unit-3-cover.png" alt="AP Biology Unit 3 Cover">
         <div class="card-body">
-          <div class="price-row">
-            <span class="unit-tag">AP Biology · Unit 3</span>
-            <span class="price-pill">Free Launch Edition / $3 Value</span>
-          </div>
-          <h2>Unit 3: Cellular Energetics Complete Study Guide</h2>
-          <p>Enzymes, free energy (&Delta;G), cellular respiration, and photosynthesis explained from scratch with zero filler.</p>
-          <ul class="feature-list">
-            <li><strong>1-Page Unit Map</strong> + Free Energy (&Delta;G), ATP &amp; redox coupling</li>
-            <li><strong>Enzyme Kinetics Table:</strong> temp, pH, salinity &amp; all 3 inhibition types</li>
-            <li><strong>Cellular Respiration:</strong> glycolysis, pyruvate oxidation, Krebs, ETC &amp; chemiosmosis per-glucose table</li>
-            <li><strong>Photosynthesis:</strong> linear vs. cyclic flow, Calvin cycle, C3/C4/CAM table</li>
-            <li><strong>Practice &amp; Review:</strong> 6 original FRQ sets with full answer keys + 1-page cram sheet</li>
-          </ul>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a class="btn btn-primary" style="flex: 1; justify-content: center;" href="AP-Biology-Unit-3-Study-Guide.pdf" download>
-              ⬇ Download Unit 3 Guide (PDF)
-            </a>
+          <div class="tag bio">AP &amp; College Biology · Unit 3 (Ch. 8–10)</div>
+          <h3>Unit 3: Cellular Energetics (Enzymes, Respiration &amp; Photosynthesis)</h3>
+          <p>Free energy ($\Delta G$), competitive vs. allosteric enzyme inhibition, cellular respiration, and photosynthesis.</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+            <a class="btn btn-primary" style="flex: 1;" href="AP-Biology-Unit-3-Study-Guide.pdf" download>⬇ Unit 3 PDF</a>
+            <a class="btn btn-outline" style="flex: 1;" href="https://youtu.be/z3teq6j8kZc" target="_blank" rel="noopener">▶ Watch 9m Video</a>
           </div>
         </div>
       </article>
 
-      <!-- Unit 4 Card -->
+      <!-- Unit 4 -->
       <article class="card">
-        <img class="card-cover" src="unit-4-cover.png" alt="AP Biology Unit 4 Cell Communication and Cell Cycle Study Guide Cover">
+        <img class="card-cover" src="unit-4-cover.png" alt="AP Biology Unit 4 Cover">
         <div class="card-body">
-          <div class="price-row">
-            <span class="unit-tag u4">AP Biology · Unit 4</span>
-            <span class="price-pill">Free Launch Edition / $3 Value</span>
-          </div>
-          <h2>Unit 4: Cell Communication &amp; Cell Cycle Study Guide</h2>
-          <p>Signal transduction pathways, GPCRs vs. RTKs, second messengers, feedback loops, mitosis, and cell-cycle checkpoints.</p>
-          <ul class="feature-list">
-            <li><strong>Signaling Distance &amp; Reception:</strong> GPCR vs. RTK vs. ligand-gated channels &amp; intracellular receptors</li>
-            <li><strong>Transduction &amp; Second Messengers:</strong> phosphorylation cascades, cAMP, Ca<sup>2+</sup> &amp; IP<sub>3</sub>/DAG</li>
-            <li><strong>Feedback Loops:</strong> negative (insulin/glucagon) vs. positive feedback</li>
-            <li><strong>Cell Cycle &amp; Cancer:</strong> G1/G2/M checkpoints, cyclins/Cdks, p53/p21/Rb, and mitosis phases</li>
-            <li><strong>Practice &amp; Review:</strong> Worked AP-style FRQs (mutation trace + experimental design) + 1-page cram sheet</li>
-          </ul>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a class="btn btn-blue" style="flex: 1; justify-content: center;" href="AP-Biology-Unit-4-Study-Guide.pdf" download>
-              ⬇ Download Unit 4 Guide (PDF)
-            </a>
+          <div class="tag u4">AP &amp; College Biology · Unit 4 (Ch. 11–12)</div>
+          <h3>Unit 4: Cell Communication &amp; Cell Cycle (GPCRs, RTKs &amp; Mitosis)</h3>
+          <p>Signal transduction pathways, second messengers (cAMP, $\text{Ca}^{2+}$), feedback loops, checkpoints, and mitosis.</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+            <a class="btn btn-blue" style="flex: 1;" href="AP-Biology-Unit-4-Study-Guide.pdf" download>⬇ Unit 4 PDF</a>
+            <a class="btn btn-outline" style="flex: 1;" href="https://youtu.be/z3teq6j8kZc" target="_blank" rel="noopener">▶ Watch 9m Video</a>
           </div>
         </div>
       </article>
@@ -305,9 +208,9 @@
 
     <footer>
       <p>
-        <strong>Disclaimer:</strong> Independent, original study guides. Not affiliated with, endorsed by, or reviewed by the College Board. AP® is a registered trademark of the College Board. Informed in part by OpenStax <em>Biology for AP® Courses</em> (licensed under CC BY 4.0).
+        <strong>Disclaimer:</strong> Independent, original educational guides. Not affiliated with, endorsed by, or reviewed by the College Board. AP® is a registered trademark of the College Board. Informed in part by OpenStax textbooks (licensed under CC BY 4.0).
       </p>
-      <p style="margin-top: 8px;">© 2026 Jerry Labs · Built with Paperclip &amp; Hermes AI Team</p>
+      <p style="margin-top: 8px;">© 2026 StudyLab Hub · Jerry Labs</p>
     </footer>
   </div>
 </body>
